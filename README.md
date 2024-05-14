@@ -13,7 +13,13 @@ Thiết kế gồm:
 - 16 khối FSM: xác định trạng thái và đưa ra tín hiệu ở từng trạng thái.
 - 16 khối Arbiter xử lý riêng cho từng port ngõ ra.
 - 16 khối DATA-ENABLE để cho phép/không cho phép truyền payload.
-
+Các tín hiệu vào ra:
+- din [15:0]: các tín hiệu ngõ vào gồm <address><padding><payload>.
+- frame_n [15:0]: các tín hiệu frame truyền mức thấp, kết thúc khi frame_n = 1;
+- valid_n [15:0]: các tín hiệu valid bit truyền trong <payload>, bit hợp lệ khi valid_n = 0 và ngược lại.
+- dout [15:0]: các tín hiệu ngõ ra gồm <payload>.
+- frameo_n [15:0]: các tín hiệu frame nhận mức thấp, kết thúc khi frameo_n = 1;
+- valido_n [15:0]: các tín hiệu valid bit nhận trong <payload>, bit hợp lệ khi valid_n = 0 và ngược lại.
 ![github](https://github.com/PhuocTai03/Router-16x16/blob/main/media/design_model.png)
 
 ## Sơ đồ trạng thái FSM
