@@ -101,7 +101,7 @@ module FSM(clk, reset_n, din, frame_n, busy16_in, grant16_in, request_out, data_
             end
             payloadState: begin
                 data_enable_out     <= 1;
-                request_out[addressAccumulator] <= 1;   //request_out toi khi nao frame_n = 1
+                request_out[addressAccumulator] <= 1;
                 address_out         <= addressAccumulator;
             end
             default: begin
