@@ -12,7 +12,6 @@ module FSM(clk, reset_n, din, frame_n, busy16_in, grant16_in, request_out, data_
     
     reg [2:0]   currentState;
     reg [2:0]   nextState;
-    reg [4:0]   resetCycle;
     reg [3:0]   addressAccumulator;
     parameter   initState           = 3'b000;
     parameter   getAddr1State       = 3'b001;
@@ -20,7 +19,7 @@ module FSM(clk, reset_n, din, frame_n, busy16_in, grant16_in, request_out, data_
     parameter   getAddr3State       = 3'b011;
     parameter   getAddr4State       = 3'b100;
     parameter   paddingState        = 3'b101;
-    parameter   payloadState   = 3'b110;
+    parameter   payloadState        = 3'b110;
     
     always @(currentState or frame_n or busy16_in or grant16_in or din) begin
         case(currentState)
