@@ -9,6 +9,7 @@ Thiết kế mạch có khả năng truyền dữ liệu từ port đầu vào r
 
 
 ## Minh họa mô hình thiết kế
+![github](https://github.com/PhuocTai03/Router-16x16/blob/main/media/design_model.png)
 Thiết kế gồm:
 - 16 khối FSM: xác định trạng thái và đưa ra tín hiệu ở từng trạng thái.
 - 16 khối Arbiter xử lý riêng cho từng port ngõ ra.
@@ -21,8 +22,5 @@ Các tín hiệu vào ra:
 - dout [15:0]: các tín hiệu ngõ ra gồm <payload>.
 - frameo_n [15:0]: các tín hiệu frame nhận mức thấp, kết thúc khi frameo_n = 1;
 - valido_n [15:0]: các tín hiệu valid bit nhận trong <payload>, bit hợp lệ khi valid_n = 0 và ngược lại.
-![github](https://github.com/PhuocTai03/Router-16x16/blob/main/media/design_model.png)
-
 ## Sơ đồ trạng thái FSM
-
 ![github](https://github.com/PhuocTai03/Router-16x16/blob/main/media/state.png)
