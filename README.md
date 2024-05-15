@@ -13,6 +13,7 @@ Thiết kế gồm:
 - 16 khối FSM: xác định trạng thái và đưa ra tín hiệu ở từng trạng thái.
 - 16 khối Arbiter xử lý riêng cho từng port ngõ ra.
 - 16 khối DATA-ENABLE để cho phép/không cho phép truyền payload.
+## 
 Các tín hiệu vào ra:
 - din [15:0]: các tín hiệu ngõ vào gồm <address><padding><payload>.
 - frame_n [15:0]: các tín hiệu frame truyền mức thấp, kết thúc khi frame_n = 1;
