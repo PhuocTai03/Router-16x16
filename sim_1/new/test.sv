@@ -1,15 +1,15 @@
 `timescale 1ns / 1ps
 program automatic test(router_io.tb rtr_io);
-    bit [3:0] sa1, sa2, sa3, da1, da2, da3;
-    logic [7:0] payload_queue[$];
-    bit [7:0] temp1, temp5, temp3, temp4;
-    bit temp2[$];
-    bit [7:0] payload[$];
-    bit [7:0] pkt2cmp_payload[$];
-    integer i, j;
+    bit     [3:0]   sa1, sa2, sa3, da1, da2, da3;
+    logic   [7:0]   payload_queue[$];
+    bit     [7:0]   temp1, temp3, temp4, temp5;
+    bit             temp2[$];
+    bit     [7:0]   payload[$];
+    bit     [7:0]   pkt2cmp_payload[$];
+    integer         i, j;
     initial begin
                 reset();
-                gen();  
+                gen1();  
         fork
                 send();
                 recv();
@@ -25,7 +25,7 @@ program automatic test(router_io.tb rtr_io);
         repeat (15) @(rtr_io.cb);   
     endtask
     
-    task gen();
+    task gen1();
         sa1 = 3;
         da1 = 7;
         sa2 = 4;
@@ -106,18 +106,23 @@ program automatic test(router_io.tb rtr_io);
     
     task recv();
         @(negedge rtr_io.cb.frameo_n[da1]);                       
-            get_payload();  
+        get_payload(); 
     endtask
     task get_payload();
-        while(!rtr_io.cb.valido_n[da1]) begin
-            temp2.push_front(rtr_io.cb.dout[da1]);
-            #20;                         //get payload every 20ns
-        end
-        temp2.push_front(rtr_io.cb.dout[da1]); //get last bit after posedge valido_n
-        while(temp2.size()) begin
-            for(i = 0; i < 8; i = i + 1) begin
-                temp5 = {temp2.pop_back(), temp5[7:1]};
+        
+        @(negedge rtr_io.cb.valido_n[da1]);
+        while(!rtr_io.cb.frameo_n[da1]) begin
+            if(!rtr_io.cb.valido_n[da1]) begin
+                temp2.push_front(rtr_io.cb.dout[da1]);
+                #20;                            //get payload every 20ns
             end
+            else
+                #20;                            //skip this cycle if valido_n is high
+        end
+        temp2.push_front(rtr_io.cb.dout[da1]);  //get last bit after posedge valido_n
+        while(temp2.size()) begin
+            for(i = 0; i < 8; i = i + 1) 
+                temp5 = {temp2.pop_back(), temp5[7:1]};
             pkt2cmp_payload.push_front(temp5);
         end
     endtask

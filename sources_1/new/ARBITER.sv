@@ -14,7 +14,7 @@ module ARBITER(clk, reset_n, request, grant, busy);
     assign busy     = !noGrant;
     
     integer i;
-    always @(posedge clk or negedge reset_n) begin
+    always @(*) begin
         if(!reset_n) 
             grant[0] <= 0;         
         else if(noGrant) 

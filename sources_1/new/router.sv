@@ -11,9 +11,10 @@ module router(clk, reset_n, din, valid_n, frame_n, dout, valido_n, frameo_n);
     output bit      [15:0]  frameo_n;
     
     initial begin
-        dout        <= 16'bxxxx;
-        valido_n    <= 16'hffff;
-        frameo_n    <= 16'hffff;
+            dout        <= 16'bxxxx;
+            valido_n    <= 16'hffff;
+            frameo_n    <= 16'hffff;
+        //end
     end
     logic [15:0]    logic_request_abt0, logic_request_abt1, logic_request_abt2, logic_request_abt3,
                     logic_request_abt4, logic_request_abt5, logic_request_abt6, logic_request_abt7, 
