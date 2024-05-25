@@ -8,7 +8,7 @@ Các packets gồm 2 phần chính
 - Header : chứa thông tin 4 bit địa chỉ.
 - Payload: chứa thông tin dữ liệu.
 ## Minh họa mô hình thiết kế
-![github](https://github.com/PhuocTai03/Router-16x16/blob/main/media/design_model.png)
+![github](https://github.com/PhuocTai03/Router-16x16/blob/main/media/model.png)
 Thiết kế gồm:
 - 16 khối FSM: xác định trạng thái và đưa ra tín hiệu ở từng trạng thái.
 - 16 khối Arbiter xử lý riêng cho từng port ngõ ra.
