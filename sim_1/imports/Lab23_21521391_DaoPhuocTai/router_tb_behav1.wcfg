@@ -11,22 +11,23 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,176.001 ns"></ZoomEndTime>
-      <Cursor1Time time="1,708.000 ns"></Cursor1Time>
+      <ZoomStartTime time="3,127.287 ns"></ZoomStartTime>
+      <ZoomEndTime time="4,313.288 ns"></ZoomEndTime>
+      <Cursor1Time time="3,590.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="168"></NameColumnWidth>
+      <NameColumnWidth column_width="163"></NameColumnWidth>
       <ValueColumnWidth column_width="72"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="64" />
+   <WVObjectSize size="73" />
    <wave_markers>
-      <marker time="1070000" label="" />
-      <marker time="1270000" label="" />
-      <marker time="1430000" label="" />
-      <marker time="1590000" label="" />
-      <marker time="370000" label="" />
-      <marker time="890000" label="" />
+      <marker time="3930000" label="" />
+      <marker time="3770000" label="" />
+      <marker time="3910000" label="" />
+      <marker time="3570000" label="" />
+      <marker time="3750000" label="" />
+      <marker time="4070000" label="" />
+      <marker time="4390000" label="" />
    </wave_markers>
    <wvobject fp_name="/router_test_top/top_io/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
@@ -39,7 +40,6 @@
    <wvobject fp_name="/router_test_top/top_io/din" type="array">
       <obj_property name="ElementShortName">din[15:0]</obj_property>
       <obj_property name="ObjectShortName">din[15:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/router_test_top/top_io/frame_n" type="array">
       <obj_property name="ElementShortName">frame_n[15:0]</obj_property>
@@ -52,7 +52,6 @@
    <wvobject fp_name="/router_test_top/top_io/dout" type="array">
       <obj_property name="ElementShortName">dout[15:0]</obj_property>
       <obj_property name="ObjectShortName">dout[15:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/router_test_top/top_io/frameo_n" type="array">
       <obj_property name="ElementShortName">frameo_n[15:0]</obj_property>
@@ -61,6 +60,7 @@
    <wvobject fp_name="/router_test_top/top_io/valido_n" type="array">
       <obj_property name="ElementShortName">valido_n[15:0]</obj_property>
       <obj_property name="ObjectShortName">valido_n[15:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/router_test_top/DUT/fsm3/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
@@ -157,12 +157,10 @@
    <wvobject fp_name="/router_test_top/DUT/abt7/request" type="array">
       <obj_property name="ElementShortName">request[15:0]</obj_property>
       <obj_property name="ObjectShortName">request[15:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/router_test_top/DUT/abt7/grant" type="array">
       <obj_property name="ElementShortName">grant[15:0]</obj_property>
       <obj_property name="ObjectShortName">grant[15:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/router_test_top/DUT/abt7/busy" type="logic">
       <obj_property name="ElementShortName">busy</obj_property>
@@ -191,14 +189,12 @@
       <obj_property name="ObjectShortName">request[15:0]</obj_property>
       <obj_property name="CustomSignalColor">#FF00FF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/router_test_top/DUT/abt14/grant" type="array">
       <obj_property name="ElementShortName">grant[15:0]</obj_property>
       <obj_property name="ObjectShortName">grant[15:0]</obj_property>
       <obj_property name="CustomSignalColor">#FF00FF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/router_test_top/DUT/abt14/busy" type="logic">
       <obj_property name="ElementShortName">busy</obj_property>
@@ -224,37 +220,141 @@
       <obj_property name="CustomSignalColor">#FF00FF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
+   <wvobject fp_name="/router_test_top/DUT/fsm0/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/router_test_top/DUT/fsm0/reset_n" type="logic">
+      <obj_property name="ElementShortName">reset_n</obj_property>
+      <obj_property name="ObjectShortName">reset_n</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/router_test_top/DUT/fsm0/busy16_in" type="array">
+      <obj_property name="ElementShortName">busy16_in[15:0]</obj_property>
+      <obj_property name="ObjectShortName">busy16_in[15:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/router_test_top/DUT/fsm0/grant16_in" type="array">
+      <obj_property name="ElementShortName">grant16_in[15:0]</obj_property>
+      <obj_property name="ObjectShortName">grant16_in[15:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/router_test_top/DUT/fsm0/request_out" type="array">
+      <obj_property name="ElementShortName">request_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">request_out[15:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/router_test_top/DUT/fsm0/data_enable_out" type="logic">
+      <obj_property name="ElementShortName">data_enable_out</obj_property>
+      <obj_property name="ObjectShortName">data_enable_out</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/router_test_top/DUT/fsm0/address_out" type="array">
+      <obj_property name="ElementShortName">address_out[3:0]</obj_property>
+      <obj_property name="ObjectShortName">address_out[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/router_test_top/DUT/fsm0/currentState" type="array">
+      <obj_property name="ElementShortName">currentState[2:0]</obj_property>
+      <obj_property name="ObjectShortName">currentState[2:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/router_test_top/DUT/fsm1/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/router_test_top/DUT/fsm1/reset_n" type="logic">
+      <obj_property name="ElementShortName">reset_n</obj_property>
+      <obj_property name="ObjectShortName">reset_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/router_test_top/DUT/fsm1/din" type="logic">
+      <obj_property name="ElementShortName">din</obj_property>
+      <obj_property name="ObjectShortName">din</obj_property>
+   </wvobject>
+   <wvobject fp_name="/router_test_top/DUT/fsm1/frame_n" type="logic">
+      <obj_property name="ElementShortName">frame_n</obj_property>
+      <obj_property name="ObjectShortName">frame_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/router_test_top/DUT/fsm1/busy16_in" type="array">
+      <obj_property name="ElementShortName">busy16_in[15:0]</obj_property>
+      <obj_property name="ObjectShortName">busy16_in[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/router_test_top/DUT/fsm1/grant16_in" type="array">
+      <obj_property name="ElementShortName">grant16_in[15:0]</obj_property>
+      <obj_property name="ObjectShortName">grant16_in[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/router_test_top/DUT/fsm1/request_out" type="array">
+      <obj_property name="ElementShortName">request_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">request_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/router_test_top/DUT/fsm1/data_enable_out" type="logic">
+      <obj_property name="ElementShortName">data_enable_out</obj_property>
+      <obj_property name="ObjectShortName">data_enable_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/router_test_top/DUT/fsm1/address_out" type="array">
+      <obj_property name="ElementShortName">address_out[3:0]</obj_property>
+      <obj_property name="ObjectShortName">address_out[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/router_test_top/DUT/fsm1/currentState" type="array">
+      <obj_property name="ElementShortName">currentState[2:0]</obj_property>
+      <obj_property name="ObjectShortName">currentState[2:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/router_test_top/DUT/fsm2/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/router_test_top/DUT/fsm2/reset_n" type="logic">
       <obj_property name="ElementShortName">reset_n</obj_property>
       <obj_property name="ObjectShortName">reset_n</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/router_test_top/DUT/fsm2/busy16_in" type="array">
       <obj_property name="ElementShortName">busy16_in[15:0]</obj_property>
       <obj_property name="ObjectShortName">busy16_in[15:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/router_test_top/DUT/fsm2/grant16_in" type="array">
       <obj_property name="ElementShortName">grant16_in[15:0]</obj_property>
       <obj_property name="ObjectShortName">grant16_in[15:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/router_test_top/DUT/fsm2/request_out" type="array">
       <obj_property name="ElementShortName">request_out[15:0]</obj_property>
       <obj_property name="ObjectShortName">request_out[15:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/router_test_top/DUT/fsm2/data_enable_out" type="logic">
       <obj_property name="ElementShortName">data_enable_out</obj_property>
       <obj_property name="ObjectShortName">data_enable_out</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/router_test_top/DUT/fsm2/address_out" type="array">
       <obj_property name="ElementShortName">address_out[3:0]</obj_property>
       <obj_property name="ObjectShortName">address_out[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/router_test_top/DUT/fsm2/currentState" type="array">
       <obj_property name="ElementShortName">currentState[2:0]</obj_property>
       <obj_property name="ObjectShortName">currentState[2:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/router_test_top/DUT/fsm3/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
@@ -303,43 +403,5 @@
       <obj_property name="ObjectShortName">currentState[2:0]</obj_property>
       <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/router_test_top/DUT/fsm3/nextState" type="array">
-      <obj_property name="ElementShortName">nextState[2:0]</obj_property>
-      <obj_property name="ObjectShortName">nextState[2:0]</obj_property>
-      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/router_test_top/DUT/fsm4/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/router_test_top/DUT/fsm4/reset_n" type="logic">
-      <obj_property name="ElementShortName">reset_n</obj_property>
-      <obj_property name="ObjectShortName">reset_n</obj_property>
-   </wvobject>
-   <wvobject fp_name="/router_test_top/DUT/fsm4/busy16_in" type="array">
-      <obj_property name="ElementShortName">busy16_in[15:0]</obj_property>
-      <obj_property name="ObjectShortName">busy16_in[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/router_test_top/DUT/fsm4/grant16_in" type="array">
-      <obj_property name="ElementShortName">grant16_in[15:0]</obj_property>
-      <obj_property name="ObjectShortName">grant16_in[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/router_test_top/DUT/fsm4/request_out" type="array">
-      <obj_property name="ElementShortName">request_out[15:0]</obj_property>
-      <obj_property name="ObjectShortName">request_out[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/router_test_top/DUT/fsm4/data_enable_out" type="logic">
-      <obj_property name="ElementShortName">data_enable_out</obj_property>
-      <obj_property name="ObjectShortName">data_enable_out</obj_property>
-   </wvobject>
-   <wvobject fp_name="/router_test_top/DUT/fsm4/address_out" type="array">
-      <obj_property name="ElementShortName">address_out[3:0]</obj_property>
-      <obj_property name="ObjectShortName">address_out[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/router_test_top/DUT/fsm4/currentState" type="array">
-      <obj_property name="ElementShortName">currentState[2:0]</obj_property>
-      <obj_property name="ObjectShortName">currentState[2:0]</obj_property>
    </wvobject>
 </wave_config>

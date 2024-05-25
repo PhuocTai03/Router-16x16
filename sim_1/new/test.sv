@@ -10,12 +10,25 @@ program automatic test(router_io.tb rtr_io);
     
     initial begin
        testcase1();     //port3     => port7
+       rtr_io.cb.din      <= 16'hx;
+       rtr_io.cb.frame_n  <= 16'hffff;
+       rtr_io.cb.valid_n  <= 16'hffff;
        #100
-//       testcase2();     //16port    => 16port
-//       #100
-//       testcase3();     //16port    => port8
-//       #100
-       testcase4();
+       testcase2();     //16port    => 16port
+       rtr_io.cb.din      <= 16'hx;
+       rtr_io.cb.frame_n  <= 16'hffff;
+       rtr_io.cb.valid_n  <= 16'hffff;
+       #100
+       testcase3();     //16port    => port8
+       rtr_io.cb.din      <= 16'hx;
+       rtr_io.cb.frame_n  <= 16'hffff;
+       rtr_io.cb.valid_n  <= 16'hffff;
+       #100
+       testcase4();     //port0     => port15
+                        //port1,port2,port3 => port14
+       rtr_io.cb.din      <= 16'hx;
+       rtr_io.cb.frame_n  <= 16'hffff;
+       rtr_io.cb.valid_n  <= 16'hffff;
     end
     
     task testcase1();
@@ -171,7 +184,7 @@ program automatic test(router_io.tb rtr_io);
         rtr_io.cb.frame_n   <= 16'hffff;
         rtr_io.cb.valid_n   <= 16'hffff;
     endtask
-    //TESTCASE 3: 16 PORT IN => 1 PORT OUT (ALL PORT => PORT 10)
+    //TESTCASE 3: 16 PORT IN => 1 PORT OUT (ALL PORT => PORT 8)
     task send3();
         rtr_io.cb.frame_n <= 16'h0000;        
         send_addrs3  ();
@@ -213,7 +226,10 @@ program automatic test(router_io.tb rtr_io);
             end
             if(i == 31) begin
                 rtr_io.cb.frame_n[2]    <= 1'b1;    //end port2
-                rtr_io.cb.valid_n[2]    <= 1'b1;    
+                rtr_io.cb.valid_n[2]    <= 1'b1;
+                
+                rtr_io.cb.frame_n[0]    <= 1'b1;    //end port0
+                rtr_io.cb.valid_n[0]    <= 1'b1;     
             end
         end
         rtr_io.cb.frame_n   <= 16'hffff;
@@ -221,7 +237,7 @@ program automatic test(router_io.tb rtr_io);
     endtask
     //TESTCASE 4: 
     task send4();
-        rtr_io.cb.frame_n <= 16'hffff0;        
+        rtr_io.cb.frame_n <= 16'hfff0;        
         send_addrs4  ();
         send_padding4();
         send_payload4();
