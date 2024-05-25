@@ -1,6 +1,5 @@
 `timescale 1ns / 1ps
 `include "router_io.sv"
-`include "test.sv"
 
 module router_test_top();
     bit         clk;

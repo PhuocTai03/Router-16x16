@@ -9,7 +9,7 @@ module DATA_ENABLE(data_enable, din, valid_n, frame_n, dout, valido_n, frameo_n)
     output logic    valido_n;
     output logic    frameo_n;
     
-    always_comb begin
+    always @(*) begin
         if(data_enable) begin
             dout     <= din;
             valido_n <= valid_n;

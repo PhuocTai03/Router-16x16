@@ -1,6 +1,5 @@
 `timescale 1ns / 1ps
-module ARBITER(clk, reset_n, request, grant, busy);
-    input bit           clk;
+module ARBITER(reset_n, request, grant, busy);
     input bit           reset_n;
     input bit [15:0]    request;
     
@@ -18,12 +17,12 @@ module ARBITER(clk, reset_n, request, grant, busy);
         if(!reset_n) 
             grant[0] <= 0;         
         else if(noGrant) 
-            grant[0] <= request [0];
+            grant[0] <= request[0];
         else
             grant[0] <= request[0] & grant[0];
        for(i = 1; i < 16; i = i + 1) begin
             case(i)
-                1: higherRequestsPriority = |request[0];
+                1: higherRequestsPriority = request[0];
                 2: higherRequestsPriority = |request[1:0];
                 3: higherRequestsPriority = |request[2:0];
                 4: higherRequestsPriority = |request[3:0];
@@ -48,5 +47,6 @@ module ARBITER(clk, reset_n, request, grant, busy);
             else
                     grant[i] <= request[i] & grant[i];
        end
+       higherRequestsPriority = 0;
     end                  
 endmodule
