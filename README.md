@@ -25,3 +25,9 @@ Các tín hiệu vào ra:
 - valido_n [15:0]: các tín hiệu valid bit nhận trong <payload>, bit hợp lệ khi valid_n = 0 và ngược lại.
 ## Sơ đồ trạng thái FSM
 ![github](https://github.com/PhuocTai03/Router-16x16/blob/main/media/state.png)
+
+## Kết quả Waveform
+- din[0], din[1], din[2], din[3] cùng truyền đồng thời.
+- din[0] => dout [15]                : do dout[15] đang không busy, nên din[0] được phép truyền và cho đến khi kết thúc việc truyền.
+- din[1], din[2], din[3] => dout [14]: do din[1] có độ ưu tiên cao hơn nên din[1] được truyền đầu tiên, sau đó lần lượt tới các din[2], din[3].
+![github](https://github.com/PhuocTai03/Router-16x16/blob/main/media/waveform.png)
