@@ -60,7 +60,7 @@ module FSM(clk, reset_n, din, frame_n, busy16_in, grant16_in, request_out, data_
                     nextState <= initState;
         endcase
     end
-    always @(posedge clk or reset_n) begin
+    always @(posedge clk or negedge reset_n) begin
         if(reset_n == 0)
             currentState <= initState;
         else
