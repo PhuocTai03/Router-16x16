@@ -17,12 +17,15 @@ Thiết kế gồm:
 - 16 khối DATA-ENABLE để cho phép/không cho phép truyền payload.
 ## 
 Các tín hiệu vào ra:
-- din [15:0]: các tín hiệu ngõ vào gồm <address><padding><payload>.
-- frame_n [15:0]: các tín hiệu frame truyền mức thấp, kết thúc khi frame_n = 1;
-- valid_n [15:0]: các tín hiệu valid bit truyền trong <payload>, bit hợp lệ khi valid_n = 0 và ngược lại.
-- dout [15:0]: các tín hiệu ngõ ra gồm <payload>.
-- frameo_n [15:0]: các tín hiệu frame nhận mức thấp, kết thúc khi frameo_n = 1;
-- valido_n [15:0]: các tín hiệu valid bit nhận trong <payload>, bit hợp lệ khi valid_n = 0 và ngược lại.
+- din [15:0]: các tín hiệu ngõ vào nối tiếp từng bit (serial) gồm
+    - address: 4 bit địa chỉ dùng để xác định port ngõ ra.
+    - padding: giai đoạn chờ khi port cần truyền đang busy.
+    - payload: các bit dữ liệu cần truyền ra port ngõ ra.
+- frame_n [15:0]: các tín hiệu frame truyền, bắt đầu truyền khi frame_n = 0, kết thúc truyền khi frame_n = 1;
+- valid_n [15:0]: các tín hiệu valid bit truyền trong payload, bit hợp lệ khi valid_n = 0 và ngược lại.
+- dout [15:0]: các tín hiệu ngõ ra nối tiếp từng bit (payload).
+- frameo_n [15:0]: các tín hiệu frame nhận, bắt đầu nhận khi frameo_n = 0, kết thúc nhận khi frameo_n = 1;
+- valido_n [15:0]: các tín hiệu valid bit nhận trong payload, bit hợp lệ khi valid_n = 0 và ngược lại.
 ## Sơ đồ trạng thái FSM
 ![github](https://github.com/PhuocTai03/Router-16x16/blob/main/media/state.png)
 
