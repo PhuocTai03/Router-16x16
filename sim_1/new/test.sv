@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-program automatic test(router_io.tb rtr_io);
+program automatic test(router_io_oldversion.tb rtr_io);
     bit     [3:0]   sa, da;
     logic   [7:0]   payload_queue[$];
     bit     [7:0]   temp1, temp3, temp4, temp5;
@@ -9,32 +9,35 @@ program automatic test(router_io.tb rtr_io);
     integer         i, j;
     
     initial begin
-       testcase1();     //port3     => port7
-       rtr_io.cb.din      <= 16'hx;
-       rtr_io.cb.frame_n  <= 16'hffff;
-       rtr_io.cb.valid_n  <= 16'hffff;
-       #100
-       testcase2();     //16port    => 16port
-       rtr_io.cb.din      <= 16'hx;
-       rtr_io.cb.frame_n  <= 16'hffff;
-       rtr_io.cb.valid_n  <= 16'hffff;
-       #100
-       testcase3();     //16port    => port8
-       rtr_io.cb.din      <= 16'hx;
-       rtr_io.cb.frame_n  <= 16'hffff;
-       rtr_io.cb.valid_n  <= 16'hffff;
-       #100
-       testcase4();     //port0     => port15
-                        //port1,port2,port3 => port14
-       rtr_io.cb.din      <= 16'hx;
-       rtr_io.cb.frame_n  <= 16'hffff;
-       rtr_io.cb.valid_n  <= 16'hffff;
+        rtr_io.reset_n  <= 1'b1;
+        reset();
+        testcase1();     //port3     => port7
+        rtr_io.cb.din      <= 16'hx;
+        rtr_io.cb.frame_n  <= 16'hffff;
+        rtr_io.cb.valid_n  <= 16'hffff;
+        #100
+        
+        testcase2();     //16port    => 16port
+        rtr_io.cb.din      <= 16'hx;
+        rtr_io.cb.frame_n  <= 16'hffff;
+        rtr_io.cb.valid_n  <= 16'hffff;
+        #100
+        
+        testcase3();     //16port    => port8
+        rtr_io.cb.din      <= 16'hx;
+        rtr_io.cb.frame_n  <= 16'hffff;
+        rtr_io.cb.valid_n  <= 16'hffff;
+        #100
+        
+        testcase4();     //port0     => port15; port1,port2,port3 => port14
+        rtr_io.cb.din      <= 16'hx;
+        rtr_io.cb.frame_n  <= 16'hffff;
+        rtr_io.cb.valid_n  <= 16'hffff;
     end
     
     task testcase1();
         sa = 3;
         da = 7;
-        reset();
         gen();  
         fork
             send1();
@@ -56,27 +59,34 @@ program automatic test(router_io.tb rtr_io);
     endtask
     
     task reset();
-        rtr_io.reset_n      = 1'b0;
+        rtr_io.reset_n      <= 1'b0;
+        rtr_io.cb.din       <= 16'bz;
         rtr_io.cb.frame_n   <= 16'hffff;
         rtr_io.cb.valid_n   <= ~('b0);
-        ##2
-        rtr_io.cb.reset_n   <= 1'b1;
-        repeat (15) @(rtr_io.cb);   
+        #25
+        rtr_io.reset_n      <= 1'b1;
+        repeat (15) begin
+            $display("[%0t] - Resetting", $time);
+            @(rtr_io.cb);   
+        end
     endtask
     
     task gen();
         for (i = 0; i < 32; i = i + 1) begin
             payload_queue.push_back($random);
-            $display(" i = %0d, random = %0h", i, payload_queue[i]);
+            $display("i = %0d, random value = %h (%b)", i, payload_queue[i], payload_queue[i]);
         end
     endtask
     
     //TESTCASE 1: 1 PORT IN => 1 PORT OUT    (PORT3 => PORT7)
     task send1();
+        @(rtr_io.cb);
+        $display("[%0t] - Send() task is running", $time);
         rtr_io.cb.frame_n[sa] <= 1'b0;        
         send_addrs1  ();
-        send_padding1();
+        //send_padding1();
         send_payload1();
+        $display("[%0t] - Send() task ended", $time);
     endtask
     
     task send_addrs1(); 
@@ -121,7 +131,7 @@ program automatic test(router_io.tb rtr_io);
     endtask
     
     task get_payload();
-        @(negedge rtr_io.cb.valido_n[da]);
+        $display("[%0t] - Receiving ...", $time);
         while(!rtr_io.cb.frameo_n[da]) begin
             if(!rtr_io.cb.valido_n[da]) begin
                 temp2.push_front(rtr_io.cb.dout[da]);
@@ -139,20 +149,18 @@ program automatic test(router_io.tb rtr_io);
     endtask
     
     task check();
-        compare();
-    endtask
-    task compare();
         while (pkt2cmp_payload.size()) begin
             temp3 = payload.pop_back();
             temp4 = pkt2cmp_payload.pop_back();
             if(temp3 == temp4)
-                $display ("Transfer successed [din = %0h, dout = %0h]", temp3, temp4);
+                $display ("Transfer successed [din = %h, dout = %h]", temp3, temp4);
             else begin
-                $display ("Transfer failed    [din = %0h, dout = %0h]", temp3, temp4);
+                $display ("Transfer failed    [din = %h, dout = %h]", temp3, temp4);
                 break;
             end
         end
     endtask
+
     //TESTCASE 2: 16 PORT_IN => 16 PORT_OUT
     task send2();
         rtr_io.cb.frame_n <= 16'h0000;        

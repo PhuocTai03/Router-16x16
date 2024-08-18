@@ -5,8 +5,16 @@ module router_test_top();
     bit         clk;
     initial     clk = 0;
     always #10  clk = ~clk;
-    router_io top_io        (clk);
-    test t                  (top_io.tb);
+    
+    //old
+//    router_io_oldversion   top_io      (clk);
+//    test        t           (top_io.tb);
+    //
+    
+    //new
+    router_io   top_io      (clk);
+    testExtra   t(top_io);
+    //
     router DUT(
                 .clk        (clk),
                 .reset_n    (top_io.reset_n), 

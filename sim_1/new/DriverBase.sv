@@ -1,19 +1,18 @@
-//`timescale 1ns / 1ps
-//`include "router_test.h"
-//`ifndef DRIVER_BASE
-//`define DRIVER_BASE
-//class DriverBase;
-//    virtual router.io.tb rtr_io;
-//    string name;
-//    bit [3:0] sa, da;
-//    logic [7:0] payload[$];
-//    Packet pkt2send;
+`timescale 1ns / 1ps
+`ifndef DRIVER_BASE
+`define DRIVER_BASE
+`include "router_test.h"
+`include "Packet.sv"
+class DriverBase;
+    virtual router_io.DRIVER rtr_io;
+    string name;
+    bit [3:0] sa, da;
+    bit [7:0] payload[$];
+    Packet pkt2send;
         
-//    extern function new (virtual router_io.tb rtr_io, string name);
-//endclass: DriverBase
-
-//function DriverBase:: new (virtual router_io.tb rtr_io, string name);
-//    this.rtr_io <= rtr_io;
-//    this.name <= name;
-//endfunction
-//`endif
+    function new (virtual router_io.DRIVER rtr_io, input string name);
+        this.rtr_io = rtr_io;
+        this.name   = name;
+    endfunction
+endclass: DriverBase
+`endif
