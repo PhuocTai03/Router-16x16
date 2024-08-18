@@ -1,0 +1,699 @@
+[40000] - Resetting ...
+[60000] - Resetting ...
+[80000] - Resetting ...
+[100000] - Resetting ...
+[120000] - Resetting ...
+[140000] - Resetting ...
+[160000] - Resetting ...
+[180000] - Resetting ...
+[200000] - Resetting ...
+[220000] - Resetting ...
+[240000] - Resetting ...
+[260000] - Resetting ...
+[280000] - Resetting ...
+[300000] - Resetting ...
+[320000] - Resetting ...
+[320000] - Generator started
+[320000]- Driver[15] started
+[320000]- Driver[14] started
+[320000]- Driver[13] started
+[320000]- Driver[12] started
+[320000]- Driver[11] started
+[320000]- Driver[10] started
+[320000]- Driver[9] started
+[320000]- Driver[8] started
+[320000]- Driver[7] started
+[320000]- Driver[6] started
+[320000]- Driver[5] started
+[320000]- Driver[4] started
+[320000]- Driver[3] started
+[320000]- Driver[2] started
+[320000]- Driver[1] started
+[320000]- Driver[0] started
+[320000] - Receiver[15] started
+[320000] - Receiver[14] started
+[320000] - Receiver[13] started
+[320000] - Receiver[12] started
+[320000] - Receiver[11] started
+[320000] - Receiver[10] started
+[320000] - Receiver[9] started
+[320000] - Receiver[8] started
+[320000] - Receiver[7] started
+[320000] - Receiver[6] started
+[320000] - Receiver[5] started
+[320000] - Receiver[4] started
+[320000] - Receiver[3] started
+[320000] - Receiver[2] started
+[320000] - Receiver[1] started
+[320000] - Receiver[0] started
+[7320000] - Scoreboard started
+Number of driver packets = 46
+Number of receiver packets = 46
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa = 13, da =  8
+payload[0] = 4e (01001110)
+payload[1] = 90 (10010000)
+payload[2] = fa (11111010)
+payload[3] = c6 (11000110)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  8
+payload[0] = 4e (01001110)
+payload[1] = 90 (10010000)
+payload[2] = fa (11111010)
+payload[3] = c6 (11000110)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa =  6, da = 12
+payload[0] = 27 (00100111)
+payload[1] = 1a (00011010)
+payload[2] = c8 (11001000)
+payload[3] = c3 (11000011)
+Packet display() note: RCV_MATCHED
+sa =  0, da = 12
+payload[0] = 27 (00100111)
+payload[1] = 1a (00011010)
+payload[2] = c8 (11001000)
+payload[3] = c3 (11000011)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa =  5, da =  1
+payload[0] = 3c (00111100)
+payload[1] = 55 (01010101)
+payload[2] = eb (11101011)
+payload[3] = 35 (00110101)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  1
+payload[0] = 3c (00111100)
+payload[1] = 55 (01010101)
+payload[2] = eb (11101011)
+payload[3] = 35 (00110101)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa = 11, da =  9
+payload[0] = 52 (01010010)
+payload[1] = 64 (01100100)
+payload[2] = 37 (00110111)
+payload[3] = b4 (10110100)
+payload[4] = 63 (01100011)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  9
+payload[0] = 52 (01010010)
+payload[1] = 64 (01100100)
+payload[2] = 37 (00110111)
+payload[3] = b4 (10110100)
+payload[4] = 63 (01100011)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa =  9, da =  5
+payload[0] = 32 (00110010)
+payload[1] = ca (11001010)
+payload[2] = e7 (11100111)
+payload[3] = 0b (00001011)
+payload[4] = c2 (11000010)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  5
+payload[0] = 32 (00110010)
+payload[1] = ca (11001010)
+payload[2] = e7 (11100111)
+payload[3] = 0b (00001011)
+payload[4] = c2 (11000010)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa =  7, da =  6
+payload[0] = e8 (11101000)
+payload[1] = df (11011111)
+payload[2] = a8 (10101000)
+payload[3] = 6e (01101110)
+payload[4] = 4b (01001011)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  6
+payload[0] = e8 (11101000)
+payload[1] = df (11011111)
+payload[2] = a8 (10101000)
+payload[3] = 6e (01101110)
+payload[4] = 4b (01001011)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa =  4, da = 11
+payload[0] = e5 (11100101)
+payload[1] = 0e (00001110)
+payload[2] = fc (11111100)
+payload[3] = 9a (10011010)
+payload[4] = 75 (01110101)
+Packet display() note: RCV_MATCHED
+sa =  0, da = 11
+payload[0] = e5 (11100101)
+payload[1] = 0e (00001110)
+payload[2] = fc (11111100)
+payload[3] = 9a (10011010)
+payload[4] = 75 (01110101)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa = 15, da = 10
+payload[0] = 13 (00010011)
+payload[1] = 04 (00000100)
+payload[2] = d1 (11010001)
+payload[3] = 22 (00100010)
+payload[4] = 34 (00110100)
+payload[5] = 48 (01001000)
+Packet display() note: RCV_MATCHED
+sa =  0, da = 10
+payload[0] = 13 (00010011)
+payload[1] = 04 (00000100)
+payload[2] = d1 (11010001)
+payload[3] = 22 (00100010)
+payload[4] = 34 (00110100)
+payload[5] = 48 (01001000)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa = 12, da =  7
+payload[0] = 96 (10010110)
+payload[1] = ea (11101010)
+payload[2] = 4c (01001100)
+payload[3] = cd (11001101)
+payload[4] = 4b (01001011)
+payload[5] = 33 (00110011)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  7
+payload[0] = 96 (10010110)
+payload[1] = ea (11101010)
+payload[2] = 4c (01001100)
+payload[3] = cd (11001101)
+payload[4] = 4b (01001011)
+payload[5] = 33 (00110011)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa =  5, da = 12
+payload[0] = f5 (11110101)
+payload[1] = 65 (01100101)
+payload[2] = 2e (00101110)
+Packet display() note: RCV_MATCHED
+sa =  0, da = 12
+payload[0] = f5 (11110101)
+payload[1] = 65 (01100101)
+payload[2] = 2e (00101110)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa = 13, da = 14
+payload[0] = 22 (00100010)
+payload[1] = 1e (00011110)
+payload[2] = 52 (01010010)
+payload[3] = f0 (11110000)
+Packet display() note: RCV_MATCHED
+sa =  0, da = 14
+payload[0] = 22 (00100010)
+payload[1] = 1e (00011110)
+payload[2] = 52 (01010010)
+payload[3] = f0 (11110000)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa =  4, da =  3
+payload[0] = 8a (10001010)
+payload[1] = 99 (10011001)
+payload[2] = 3c (00111100)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  3
+payload[0] = 8a (10001010)
+payload[1] = 99 (10011001)
+payload[2] = 3c (00111100)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa =  3, da =  1
+payload[0] = f9 (11111001)
+payload[1] = 6b (01101011)
+payload[2] = cb (11001011)
+payload[3] = d6 (11010110)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  1
+payload[0] = f9 (11111001)
+payload[1] = 6b (01101011)
+payload[2] = cb (11001011)
+payload[3] = d6 (11010110)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa =  1, da =  8
+payload[0] = df (11011111)
+payload[1] = ec (11101100)
+payload[2] = 70 (01110000)
+payload[3] = f7 (11110111)
+payload[4] = 58 (01011000)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  8
+payload[0] = df (11011111)
+payload[1] = ec (11101100)
+payload[2] = 70 (01110000)
+payload[3] = f7 (11110111)
+payload[4] = 58 (01011000)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa = 15, da =  7
+payload[0] = ad (10101101)
+payload[1] = 4e (01001110)
+payload[2] = 7f (01111111)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  7
+payload[0] = ad (10101101)
+payload[1] = 4e (01001110)
+payload[2] = 7f (01111111)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa = 11, da =  2
+payload[0] = 90 (10010000)
+payload[1] = 45 (01000101)
+payload[2] = bb (10111011)
+payload[3] = 0c (00001100)
+payload[4] = 11 (00010001)
+payload[5] = 7e (01111110)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  2
+payload[0] = 90 (10010000)
+payload[1] = 45 (01000101)
+payload[2] = bb (10111011)
+payload[3] = 0c (00001100)
+payload[4] = 11 (00010001)
+payload[5] = 7e (01111110)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa =  0, da =  9
+payload[0] = 90 (10010000)
+payload[1] = 7b (01111011)
+payload[2] = bb (10111011)
+payload[3] = 19 (00011001)
+payload[4] = 5e (01011110)
+payload[5] = 9b (10011011)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  9
+payload[0] = 90 (10010000)
+payload[1] = 7b (01111011)
+payload[2] = bb (10111011)
+payload[3] = 19 (00011001)
+payload[4] = 5e (01011110)
+payload[5] = 9b (10011011)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa =  8, da =  5
+payload[0] = fe (11111110)
+payload[1] = cc (11001100)
+payload[2] = d7 (11010111)
+payload[3] = 46 (01000110)
+payload[4] = b8 (10111000)
+payload[5] = bc (10111100)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  5
+payload[0] = fe (11111110)
+payload[1] = cc (11001100)
+payload[2] = d7 (11010111)
+payload[3] = 46 (01000110)
+payload[4] = b8 (10111000)
+payload[5] = bc (10111100)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa = 14, da = 10
+payload[0] = 4e (01001110)
+payload[1] = 84 (10000100)
+payload[2] = 3d (00111101)
+payload[3] = 88 (10001000)
+payload[4] = 7c (01111100)
+Packet display() note: RCV_MATCHED
+sa =  0, da = 10
+payload[0] = 4e (01001110)
+payload[1] = 84 (10000100)
+payload[2] = 3d (00111101)
+payload[3] = 88 (10001000)
+payload[4] = 7c (01111100)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa = 12, da =  1
+payload[0] = 36 (00110110)
+payload[1] = b2 (10110010)
+payload[2] = 52 (01010010)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  1
+payload[0] = 36 (00110110)
+payload[1] = b2 (10110010)
+payload[2] = 52 (01010010)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa = 13, da = 13
+payload[0] = fc (11111100)
+payload[1] = e2 (11100010)
+payload[2] = ae (10101110)
+payload[3] = 21 (00100001)
+Packet display() note: RCV_MATCHED
+sa =  0, da = 13
+payload[0] = fc (11111100)
+payload[1] = e2 (11100010)
+payload[2] = ae (10101110)
+payload[3] = 21 (00100001)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa =  3, da =  6
+payload[0] = e9 (11101001)
+payload[1] = e3 (11100011)
+payload[2] = 69 (01101001)
+payload[3] = b7 (10110111)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  6
+payload[0] = e9 (11101001)
+payload[1] = e3 (11100011)
+payload[2] = 69 (01101001)
+payload[3] = b7 (10110111)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa =  5, da =  8
+payload[0] = f7 (11110111)
+payload[1] = 2d (00101101)
+payload[2] = 3e (00111110)
+payload[3] = ef (11101111)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  8
+payload[0] = f7 (11110111)
+payload[1] = 2d (00101101)
+payload[2] = 3e (00111110)
+payload[3] = ef (11101111)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa =  1, da =  5
+payload[0] = 2e (00101110)
+payload[1] = e2 (11100010)
+payload[2] = 54 (01010100)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  5
+payload[0] = 2e (00101110)
+payload[1] = e2 (11100010)
+payload[2] = 54 (01010100)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa = 15, da =  7
+payload[0] = 0c (00001100)
+payload[1] = 60 (01100000)
+payload[2] = 13 (00010011)
+payload[3] = 57 (01010111)
+payload[4] = 8e (10001110)
+payload[5] = c2 (11000010)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  7
+payload[0] = 0c (00001100)
+payload[1] = 60 (01100000)
+payload[2] = 13 (00010011)
+payload[3] = 57 (01010111)
+payload[4] = 8e (10001110)
+payload[5] = c2 (11000010)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa =  9, da =  2
+payload[0] = 56 (01010110)
+payload[1] = 32 (00110010)
+payload[2] = 02 (00000010)
+payload[3] = 73 (01110011)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  2
+payload[0] = 56 (01010110)
+payload[1] = 32 (00110010)
+payload[2] = 02 (00000010)
+payload[3] = 73 (01110011)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa =  7, da =  9
+payload[0] = b7 (10110111)
+payload[1] = 2c (00101100)
+payload[2] = 4c (01001100)
+payload[3] = 04 (00000100)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  9
+payload[0] = b7 (10110111)
+payload[1] = 2c (00101100)
+payload[2] = 4c (01001100)
+payload[3] = 04 (00000100)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa = 12, da = 12
+payload[0] = 27 (00100111)
+payload[1] = b8 (10111000)
+payload[2] = 2b (00101011)
+payload[3] = 33 (00110011)
+Packet display() note: RCV_MATCHED
+sa =  0, da = 12
+payload[0] = 27 (00100111)
+payload[1] = b8 (10111000)
+payload[2] = 2b (00101011)
+payload[3] = 33 (00110011)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa =  0, da =  6
+payload[0] = 3e (00111110)
+payload[1] = c7 (11000111)
+payload[2] = 10 (00010000)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  6
+payload[0] = 3e (00111110)
+payload[1] = c7 (11000111)
+payload[2] = 10 (00010000)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa =  4, da =  1
+payload[0] = 37 (00110111)
+payload[1] = cd (11001101)
+payload[2] = 6b (01101011)
+payload[3] = 7b (01111011)
+payload[4] = 6f (01101111)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  1
+payload[0] = 37 (00110111)
+payload[1] = cd (11001101)
+payload[2] = 6b (01101011)
+payload[3] = 7b (01111011)
+payload[4] = 6f (01101111)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa =  5, da = 13
+payload[0] = ff (11111111)
+payload[1] = 0f (00001111)
+payload[2] = ce (11001110)
+payload[3] = 9c (10011100)
+Packet display() note: RCV_MATCHED
+sa =  0, da = 13
+payload[0] = ff (11111111)
+payload[1] = 0f (00001111)
+payload[2] = ce (11001110)
+payload[3] = 9c (10011100)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa =  1, da =  0
+payload[0] = 14 (00010100)
+payload[1] = 9f (10011111)
+payload[2] = 43 (01000011)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  0
+payload[0] = 14 (00010100)
+payload[1] = 9f (10011111)
+payload[2] = 43 (01000011)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa =  3, da =  8
+payload[0] = a8 (10101000)
+payload[1] = b8 (10111000)
+payload[2] = 07 (00000111)
+payload[3] = a0 (10100000)
+payload[4] = 81 (10000001)
+payload[5] = 8a (10001010)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  8
+payload[0] = a8 (10101000)
+payload[1] = b8 (10111000)
+payload[2] = 07 (00000111)
+payload[3] = a0 (10100000)
+payload[4] = 81 (10000001)
+payload[5] = 8a (10001010)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa = 10, da =  9
+payload[0] = 8f (10001111)
+payload[1] = 9f (10011111)
+payload[2] = 2b (00101011)
+payload[3] = 48 (01001000)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  9
+payload[0] = 8f (10001111)
+payload[1] = 9f (10011111)
+payload[2] = 2b (00101011)
+payload[3] = 48 (01001000)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa = 12, da = 12
+payload[0] = 87 (10000111)
+payload[1] = 80 (10000000)
+payload[2] = e1 (11100001)
+payload[3] = c8 (11001000)
+Packet display() note: RCV_MATCHED
+sa =  0, da = 12
+payload[0] = 87 (10000111)
+payload[1] = 80 (10000000)
+payload[2] = e1 (11100001)
+payload[3] = c8 (11001000)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa =  7, da = 14
+payload[0] = db (11011011)
+payload[1] = 53 (01010011)
+payload[2] = e8 (11101000)
+payload[3] = 8a (10001010)
+payload[4] = 37 (00110111)
+Packet display() note: RCV_MATCHED
+sa =  0, da = 14
+payload[0] = db (11011011)
+payload[1] = 53 (01010011)
+payload[2] = e8 (11101000)
+payload[3] = 8a (10001010)
+payload[4] = 37 (00110111)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa = 13, da =  5
+payload[0] = 6a (01101010)
+payload[1] = c6 (11000110)
+payload[2] = 84 (10000100)
+payload[3] = 88 (10001000)
+payload[4] = 04 (00000100)
+payload[5] = d8 (11011000)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  5
+payload[0] = 6a (01101010)
+payload[1] = c6 (11000110)
+payload[2] = 84 (10000100)
+payload[3] = 88 (10001000)
+payload[4] = 04 (00000100)
+payload[5] = d8 (11011000)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa = 15, da =  2
+payload[0] = d1 (11010001)
+payload[1] = 8c (10001100)
+payload[2] = ba (10111010)
+payload[3] = b1 (10110001)
+payload[4] = 33 (00110011)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  2
+payload[0] = d1 (11010001)
+payload[1] = 8c (10001100)
+payload[2] = ba (10111010)
+payload[3] = b1 (10110001)
+payload[4] = 33 (00110011)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa =  3, da =  4
+payload[0] = ae (10101110)
+payload[1] = 54 (01010100)
+payload[2] = 47 (01000111)
+payload[3] = 81 (10000001)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  4
+payload[0] = ae (10101110)
+payload[1] = 54 (01010100)
+payload[2] = 47 (01000111)
+payload[3] = 81 (10000001)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa = 10, da = 13
+payload[0] = 55 (01010101)
+payload[1] = ad (10101101)
+payload[2] = 99 (10011001)
+payload[3] = b2 (10110010)
+Packet display() note: RCV_MATCHED
+sa =  0, da = 13
+payload[0] = 55 (01010101)
+payload[1] = ad (10101101)
+payload[2] = 99 (10011001)
+payload[3] = b2 (10110010)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa = 12, da =  0
+payload[0] = aa (10101010)
+payload[1] = f9 (11111001)
+payload[2] = da (11011010)
+payload[3] = fa (11111010)
+payload[4] = 4e (01001110)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  0
+payload[0] = aa (10101010)
+payload[1] = f9 (11111001)
+payload[2] = da (11011010)
+payload[3] = fa (11111010)
+payload[4] = 4e (01001110)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa = 14, da =  5
+payload[0] = 20 (00100000)
+payload[1] = e1 (11100001)
+payload[2] = eb (11101011)
+payload[3] = da (11011010)
+payload[4] = dd (11011101)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  5
+payload[0] = 20 (00100000)
+payload[1] = e1 (11100001)
+payload[2] = eb (11101011)
+payload[3] = da (11011010)
+payload[4] = dd (11011101)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa =  0, da = 14
+payload[0] = 8c (10001100)
+payload[1] = 20 (00100000)
+payload[2] = c1 (11000001)
+payload[3] = 7a (01111010)
+payload[4] = 22 (00100010)
+payload[5] = 44 (01000100)
+Packet display() note: RCV_MATCHED
+sa =  0, da = 14
+payload[0] = 8c (10001100)
+payload[1] = 20 (00100000)
+payload[2] = c1 (11000001)
+payload[3] = 7a (01111010)
+payload[4] = 22 (00100010)
+payload[5] = 44 (01000100)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa = 10, da =  0
+payload[0] = 33 (00110011)
+payload[1] = 14 (00010100)
+payload[2] = d8 (11011000)
+payload[3] = 5d (01011101)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  0
+payload[0] = 33 (00110011)
+payload[1] = 14 (00010100)
+payload[2] = d8 (11011000)
+payload[3] = 5d (01011101)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa = 13, da =  5
+payload[0] = 51 (01010001)
+payload[1] = 9b (10011011)
+payload[2] = 20 (00100000)
+payload[3] = 8e (10001110)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  5
+payload[0] = 51 (01010001)
+payload[1] = 9b (10011011)
+payload[2] = 20 (00100000)
+payload[3] = 8e (10001110)
+[7320000] - SCOREBOARD: Packet matched!
+Packet display() note: DRV_MATCHED
+sa = 10, da =  8
+payload[0] = d5 (11010101)
+payload[1] = 56 (01010110)
+payload[2] = 50 (01010000)
+payload[3] = ad (10101101)
+payload[4] = 26 (00100110)
+payload[5] = ca (11001010)
+Packet display() note: RCV_MATCHED
+sa =  0, da =  8
+payload[0] = d5 (11010101)
+payload[1] = 56 (01010110)
+payload[2] = 50 (01010000)
+payload[3] = ad (10101101)
+payload[4] = 26 (00100110)
+payload[5] = ca (11001010)
+[7320000] - Scoreboard finished. Packets checked: 46, Errors: 0
+[7320000] - SCOREBOARD: done!
