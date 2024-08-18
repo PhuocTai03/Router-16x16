@@ -10,11 +10,12 @@ module router(clk, reset_n, din, valid_n, frame_n, dout, valido_n, frameo_n);
     output logic    [15:0]  valido_n;
     output bit      [15:0]  frameo_n;
     
-    initial begin
-            dout        <= 16'bxxxx;
+    always_ff @(posedge clk or negedge reset_n) begin
+        if(!reset_n) begin
+            dout        <= 16'bz;
             valido_n    <= 16'hffff;
             frameo_n    <= 16'hffff;
-        //end
+        end
     end
     logic [15:0]    logic_request_abt0, logic_request_abt1, logic_request_abt2, logic_request_abt3,
                     logic_request_abt4, logic_request_abt5, logic_request_abt6, logic_request_abt7, 
@@ -89,22 +90,22 @@ module router(clk, reset_n, din, valid_n, frame_n, dout, valido_n, frameo_n);
     ARBITER abt13   (reset_n, logic_request_abt13, logic_grant_abt13, busy_abt13);
     ARBITER abt14   (reset_n, logic_request_abt14, logic_grant_abt14, busy_abt14);
     ARBITER abt15   (reset_n, logic_request_abt15, logic_grant_abt15, busy_abt15);
-    DATA_ENABLE dataE0  (de0, din[0], valid_n[0], frame_n[0], dout0, valido_n0, frameo_n0);
-    DATA_ENABLE dataE1  (de1, din[1], valid_n[1], frame_n[1], dout1, valido_n1, frameo_n1);
-    DATA_ENABLE dataE2  (de2, din[2], valid_n[2], frame_n[2], dout2, valido_n2, frameo_n2);
-    DATA_ENABLE dataE3  (de3, din[3], valid_n[3], frame_n[3], dout3, valido_n3, frameo_n3);
-    DATA_ENABLE dataE4  (de4, din[4], valid_n[4], frame_n[4], dout4, valido_n4, frameo_n4);
-    DATA_ENABLE dataE5  (de5, din[5], valid_n[5], frame_n[5], dout5, valido_n5, frameo_n5);
-    DATA_ENABLE dataE6  (de6, din[6], valid_n[6], frame_n[6], dout6, valido_n6, frameo_n6);
-    DATA_ENABLE dataE7  (de7, din[7], valid_n[7], frame_n[7], dout7, valido_n7, frameo_n7);
-    DATA_ENABLE dataE8  (de8, din[8], valid_n[8], frame_n[8], dout8, valido_n8, frameo_n8);
-    DATA_ENABLE dataE9  (de9, din[9], valid_n[9], frame_n[9], dout9, valido_n9, frameo_n9);
-    DATA_ENABLE dataE10 (de10, din[10], valid_n[10], frame_n[10], dout10, valido_n10, frameo_n10);
-    DATA_ENABLE dataE11 (de11, din[11], valid_n[11], frame_n[11], dout11, valido_n11, frameo_n11);
-    DATA_ENABLE dataE12 (de12, din[12], valid_n[12], frame_n[12], dout12, valido_n12, frameo_n12);
-    DATA_ENABLE dataE13 (de13, din[13], valid_n[13], frame_n[13], dout13, valido_n13, frameo_n13);
-    DATA_ENABLE dataE14 (de14, din[14], valid_n[14], frame_n[14], dout14, valido_n14, frameo_n14);
-    DATA_ENABLE dataE15 (de15, din[15], valid_n[15], frame_n[15], dout15, valido_n15, frameo_n15);
+    DATA_ENABLE dataE0  (reset_n, de0, din[0], valid_n[0], frame_n[0], dout0, valido_n0, frameo_n0);
+    DATA_ENABLE dataE1  (reset_n, de1, din[1], valid_n[1], frame_n[1], dout1, valido_n1, frameo_n1);
+    DATA_ENABLE dataE2  (reset_n, de2, din[2], valid_n[2], frame_n[2], dout2, valido_n2, frameo_n2);
+    DATA_ENABLE dataE3  (reset_n, de3, din[3], valid_n[3], frame_n[3], dout3, valido_n3, frameo_n3);
+    DATA_ENABLE dataE4  (reset_n, de4, din[4], valid_n[4], frame_n[4], dout4, valido_n4, frameo_n4);
+    DATA_ENABLE dataE5  (reset_n, de5, din[5], valid_n[5], frame_n[5], dout5, valido_n5, frameo_n5);
+    DATA_ENABLE dataE6  (reset_n, de6, din[6], valid_n[6], frame_n[6], dout6, valido_n6, frameo_n6);
+    DATA_ENABLE dataE7  (reset_n, de7, din[7], valid_n[7], frame_n[7], dout7, valido_n7, frameo_n7);
+    DATA_ENABLE dataE8  (reset_n, de8, din[8], valid_n[8], frame_n[8], dout8, valido_n8, frameo_n8);
+    DATA_ENABLE dataE9  (reset_n, de9, din[9], valid_n[9], frame_n[9], dout9, valido_n9, frameo_n9);
+    DATA_ENABLE dataE10 (reset_n, de10, din[10], valid_n[10], frame_n[10], dout10, valido_n10, frameo_n10);
+    DATA_ENABLE dataE11 (reset_n, de11, din[11], valid_n[11], frame_n[11], dout11, valido_n11, frameo_n11);
+    DATA_ENABLE dataE12 (reset_n, de12, din[12], valid_n[12], frame_n[12], dout12, valido_n12, frameo_n12);
+    DATA_ENABLE dataE13 (reset_n, de13, din[13], valid_n[13], frame_n[13], dout13, valido_n13, frameo_n13);
+    DATA_ENABLE dataE14 (reset_n, de14, din[14], valid_n[14], frame_n[14], dout14, valido_n14, frameo_n14);
+    DATA_ENABLE dataE15 (reset_n, de15, din[15], valid_n[15], frame_n[15], dout15, valido_n15, frameo_n15);
     assign grant16_in0 = {logic_grant_abt15[0], logic_grant_abt14[0], logic_grant_abt13[0], logic_grant_abt12[0], logic_grant_abt11[0], logic_grant_abt10[0],
                          logic_grant_abt9[0], logic_grant_abt8[0], logic_grant_abt7[0], logic_grant_abt6[0], logic_grant_abt5[0],
                          logic_grant_abt4[0], logic_grant_abt3[0], logic_grant_abt2[0], logic_grant_abt1[0], logic_grant_abt0[0]};
