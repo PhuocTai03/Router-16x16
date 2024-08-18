@@ -26,11 +26,32 @@ Các tín hiệu vào ra:
 - dout [15:0]: các tín hiệu ngõ ra nối tiếp từng bit (payload).
 - frameo_n [15:0]: các tín hiệu frame nhận, bắt đầu nhận khi frameo_n = 0, kết thúc nhận khi frameo_n = 1;
 - valido_n [15:0]: các tín hiệu valid bit nhận trong payload, bit hợp lệ khi valid_n = 0 và ngược lại.
-## Sơ đồ trạng thái FSM
-![github](https://github.com/PhuocTai03/Router-16x16/blob/main/media/state.png)
 
-## Kết quả Waveform
+## Xây dựng máy trạng thái FSM
+- Sơ đồ trạng thái FSM
+![github](https://github.com/PhuocTai03/Router-16x16/blob/main/media/state.png)
+- Kết quả waveform FSM
+![github](https://github.com/PhuocTai03/Router-16x16/blob/main/media/FSM.png)
+
+## Xây dựng bộ phân xử (fix priority arbiter)
+- Nguyên lý hoạt động: bộ phân xử có nhiệm vụ xử lý các yêu cầu (request) từ 16 port đầu vào và đưa ra sự cấp phát (grant) cho yêu cầu thoã mãn với các điều kiện:
+    - Request[i] có độ ưu tiên giảm dần khi i tăng dần từ 0->15.
+    - Request[i] sẽ được grant cho đến khi request[i] kết thúc dù cho có các request[*] có độ ưu tiên cao hơn.
+- Kết quả waveform Arbiter
+![github](https://github.com/PhuocTai03/Router-16x16/blob/main/media/wf_arbiter.png)
+
+## Kết quả Waveform tổng quát
 - din[0], din[1], din[2], din[3] cùng truyền đồng thời.
 - din[0] => dout [15]                : do dout[15] đang không busy, nên din[0] được phép truyền và cho đến khi kết thúc việc truyền.
 - din[1], din[2], din[3] => dout [14]: do din[1] có độ ưu tiên cao hơn nên din[1] được truyền đầu tiên, sau đó lần lượt tới các din[2], din[3].
 ![github](https://github.com/PhuocTai03/Router-16x16/blob/main/media/waveform.png)
+
+## Xây dựng bộ kiểm tra dựa trên phương pháp hướng đối tượng OOP
+- Minh hoạ các Verification Component của thiết kế
+![github](https://github.com/PhuocTai03/Router-16x16/blob/main/media/verification_component.png)
+- Minh hoạ kiến trúc của test bench
+![github](https://github.com/PhuocTai03/Router-16x16/blob/main/media/tb_architecture.png)
+- Kết quả mô phỏng
+![github](https://github.com/PhuocTai03/Router-16x16/blob/main/media/waveform2.png)
+- Minh hoạ kết quả mô phỏng qua TCL Console (chi tiết ở file \sim_1\new\tclConsole.txt)
+![github](https://github.com/PhuocTai03/Router-16x16/blob/main/media/tclConsole.png)
